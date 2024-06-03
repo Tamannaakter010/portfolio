@@ -82,34 +82,38 @@ nav ul li a:hover::after {
 .row {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
-.about-col-1 {  
-  flex-basis: 35%;
+.about-col-1, .about-col-2 {
+  flex-basis: 100%; /* Changed to 100% for mobile screens */
+  font-size: 14px;
+  margin-bottom: 20px; /* Added margin for spacing */
 }
 
 .about-col-1 img {
-  width: 93%;
+  width: 100%; /* Adjusted to full width */
   border-radius: 10px;
-  height: 95%;
+  height: auto; /* Adjusted for responsiveness */
 }
-.about-col-1{
-  flex-basis: 60%;
-  font-size: 14px;
-}
+
 .sub-title {
-font-size: 30px;
-font-weight: 600;
-color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
 }
-#sub-title-font{
+
+#sub-title-font {
   font-size: 14px;
   padding: 10px;
-
 }
+.sub-title .pn{
+  text-align: center;
+}
+
 .tab-titles {
-  
   position: relative;
+  margin-top: 20px; /* Added margin for spacing */
 }
 
 .tab-links {
@@ -134,24 +138,48 @@ color: #fff;
 
 .tab-links:hover::after {
   width: 50%;
-
 }
-.tab-contents ul li{
+
+.tab-contents ul li {
   list-style: none;
   margin: 8px 0;
-  font-size: 14px
-
+  font-size: 14px;
 }
+
 .tab-contents ul li span {
   color: #ff004f;
   font-size: 13px;
 }
-.tab-contents{
+
+.tab-contents {
   display: none;
 }
-.tab-contents.active-tab{
+
+.tab-contents.active-tab {
   display: block;
 }
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Changed to column for mobile screens */
+  }
+  .about-col-1, .about-col-2 {
+    flex-basis: 100%; /* Ensures full width for mobile */
+  }
+  .sub-title {
+    font-size: 24px; /* Adjusted for mobile */
+  }
+  .tab-links {
+    font-size: 16px; /* Adjusted for mobile */
+    padding: 10px; /* Adjusted for mobile */
+  }
+  #sub-title-font {
+    font-size: 12px; /* Adjusted for mobile */
+    padding: 5px; /* Adjusted for mobile */
+  }
+}
+
 /* <!-- -------------Services------------------------ --> */
 #services{
   padding: 30px, 0;
