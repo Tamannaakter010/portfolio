@@ -12,11 +12,11 @@
     <nav>
         <h3 class="nav-title">Tamanna <span class="text-primary">A</span>kter</h3>
         <ul id="sidemenu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
             <a href="#" class="menu">  <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i></a>
         </ul>
         <a href="#" class="menu">  <i class="fa-solid fa-bars" onclick="openmenu()"></i></a>
@@ -24,18 +24,15 @@
     <div class="header-text"></div>
     <p><b>Hi, I am Tamanna <span class="header-text-span">A</span>kter</b></p>
     <h1>Front-end developer<br> Dhaka, Bangladesh</h1>
-    
 </div>
 </div>
+
 <!-- --------------about-------------- -->
-<div id="about"></div>
+<section class="selection" id="about">
 <div class="container">
     <div class="row">
-        <div class="about-col-1">
-            <img src="images/background-image.jpeg" alt="About Image">
-        </div>
         <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
+            <h1 class="about-me sub-title">About Me</h1>
             <p id="sub-title-font">As a dedicated web developer, I specialize in creating dynamic and engaging user interfaces 
                 using HTML5, CSS3, Tailwind CSS, Vanilla CSS, Bootstrap, JavaScript, and WordPress.
                  My experience in machine learning adds an extra layer of depth to my skill set, allowing me to develop
@@ -52,42 +49,32 @@
                   </div>
                   <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        
                         <li><span>Web Development & Designing</span><br>Html, Css, Wordpress & Js</li>
                         <li><span>Programming</span><br>[c, c++, python(Basic), Js]</li>
                         <li><span>Video & Photo </span><br> Editing</li>
                         <li><span> Data analysis and Data Mining</span> <br>[Research, Machine learning, Data Analysis and Visualization]</li>
-                       
-                       
                     </ul>
         </div> 
         <div class="tab-contents" id="experience">
                     <ul>
-                        
                         <li><span>It Manager</span><br>2018-2021</li>
                         <li><span>Human Resources</span><br>2015-2017</li>
-                       
                     </ul>
         </div> 
        <div class="tab-contents" id="education">
                     <ul>
-                        
                         <li><span>Msc in Information and Communication Technology</span><br>  (2021-current)</li>
                         <li><span>Bsc in Computer Science and Engineering</span><br>2016-2020</li>
                         <li><span>Higher Secondary School Certificates </span><br> 2014</li>
                         <li><span>Secondary School Certificates</span> <br>2012 </li>
-                       
-                       
-
                     </ul>
         </div> 
-        
     </div>
 </div>
+</div></section>
 
-</div>
 <!-- -------------Services------------------------ -->
-<div id="services"></div>
+<section class="selection" id="services">
 <div class="container">
     <h1 class="sub-title">My Services</h1>
     <div class="services-list">
@@ -112,12 +99,11 @@
              I transform raw data into actionable intelligence, driving business growth and innovation.</p>
              <a href="#">Learn More...</a>
     </div>
-
-
     </div>
-</div>
+</div></section>
+
 <!-- --------------portfolio----------------- -->
-<div id="portfolio"></div>
+<section class="selection" id="portfolio">
 <div class="container">
     <h1 class="sub-title">My work</h1>
     <div class="work-list">
@@ -125,7 +111,6 @@
             <img src="images/file.png">
             <div class="layer">
                 <h3>Online Flower Shop</h3>
-               
                 <a href=" https://tamannaakter010.github.io/Flower-Shop/""><i class="fa-solid fa-fan"></i></a>
             </div>
         </div>
@@ -148,10 +133,10 @@
         </div>
     </div>
     <a href="#" class="btn">See more</a>
+</div></section>
 
-</div>
 <!-- --------------------------contact--------------------- -->
-<div id="contact">
+<section class="selection" id="contact">
     <div class="container">
         <div class="row">
             <div class="contact-left">
@@ -165,24 +150,71 @@
                     <a href="https://www.instagram.com/invites/contact/?igsh=pf5v189ql5i1&utm_content=33oiybx"> <i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/tamanna-akter-01135819b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <a href="images/Ttamanna Akter KUET--8801950768410 -.pdf" download class="btn btn2">Download Cv</a>
+                <a href="images/cv.jpg" download class="btn btn2"> Download Cv</a>
             </div>
             <div class="contact-right">
-                <form name="submit-to-google-sheet"> 
+                <form>
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn2"> Send Message</button>
                 </form>
-                <span id="msg"></span>
             </div>
         </div>
     </div>
-    <div class="copyright">
-        <p>copyright (c) kevin. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
-    </div>
-</div>
+</section>
 
+<script src="script.js"></script>
+
+
+<script>
+    function openmenu() {
+    document.getElementById("sidemenu").style.right = "0";
+}
+
+function closemenu() {
+    document.getElementById("sidemenu").style.right = "-200px";
+}
+
+// Tab functions
+function opentab(tabname) {
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+// Highlight active section in navbar
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLi = document.querySelectorAll('nav ul li a');
+
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 60) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLi.forEach(li => {
+        li.classList.remove('active');
+        if (li.getAttribute('href').includes(current)) {
+            li.classList.add('active');
+        }
+    });
+});
+</script>
 
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
